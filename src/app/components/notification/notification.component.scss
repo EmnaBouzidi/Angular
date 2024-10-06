@@ -1,0 +1,93 @@
+// Définir les variables pour les couleurs et les espacements
+// Styles globaux
+body {
+    background-image: url('../../../assets/argent.png'); // Assurez-vous que le chemin est correct
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+$primary-color: #007bff;
+$success-color: #28a745;
+$background-color: #f8f9fa;
+$text-color: #333;
+
+// Conteneur principal pour centrer le contenu
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// Styles pour la barre de navigation
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem;
+
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-left: 1rem;
+
+      .nav-link {
+        color: #fff;
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Styles pour le conteneur de notification
+.message-background {
+  background: rgba(255, 255, 255, 0.8); // Fond semi-transparent
+  padding: 20px;
+  border-radius: 8px;
+  color: $text-color;
+  margin-bottom: 1rem;
+}
+
+// Styles pour l'alerte de succès
+.alert-success {
+  background-color: $success-color;
+  color: #fff;
+
+  .btn-close {
+    filter: brightness(0) invert(1); // Modifie la couleur du bouton de fermeture pour s'adapter au fond
+  }
+}
+
+// Liste des notifications
+.notification-bg {
+  background-color: $background-color;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Styles pour les éléments de la liste de notifications
+.list-group-item {
+  .text-muted {
+    color: #6c757d; // Couleur pour les éléments lus
+  }
+}
+
+// Styles pour les boutons de notification
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

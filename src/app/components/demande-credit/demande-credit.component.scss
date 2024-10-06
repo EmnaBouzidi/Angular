@@ -1,0 +1,110 @@
+/* Style global pour l'hôte */
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw; /* Assure que le host couvre toute la largeur */
+  background-image: url('../../../assets/admin.png'); /* Chemin vers votre image de fond */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Pour éviter le défilement non désiré */
+}
+
+/* Style pour le bouton de retour */
+.btn-back {
+  position: absolute; /* Positionnement absolu pour le placer où tu veux */
+  top: 10px; /* Espacement du haut */
+  left: 10px; /* Espacement de la gauche */
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Supprimer la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+  cursor: pointer; /* Curseur en forme de main au survol */
+  z-index: 1000; /* Assure que le bouton est au-dessus des autres éléments */
+  
+  &:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+  }
+}
+
+/* Style pour le conteneur principal de la page */
+.page-container {
+  position: relative; /* Assure que le bouton est positionné relativement au conteneur */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligne le contenu en haut */
+  height: 100%;
+  width: 100%; /* S'assurer que le conteneur utilise toute la largeur */
+  background-color: transparent; /* Fond transparent pour le contenu */
+}
+
+/* Style pour le conteneur principal de la page */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligne le contenu en haut */
+  background-color: transparent; /* Fond transparent pour le contenu */
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%; /* S'assurer que le conteneur utilise toute la largeur */
+  margin-top: 20px; /* Espacement au-dessus du conteneur */
+}
+
+/* Style pour le titre */
+h3 {
+  background-color: #cae3ff; /* Fond coloré pour le titre */
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px; /* Marge au-dessus du titre */
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur du titre */
+}
+
+/* Style pour le tableau */
+.table-responsive {
+  background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le tableau */
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%; /* Largeur à 100% pour le tableau */
+  max-width: 1200px; /* Limite la largeur maximale du tableau */
+  margin-top: 20px; /* Marge au-dessus du tableau */
+}
+
+.table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Style pour les boutons d'action */
+.btn-success {
+  background-color: #28a745; /* Couleur de fond verte pour le bouton Accepter */
+  border-color: #28a745; /* Couleur de bordure verte */
+  color: white; /* Couleur du texte du bouton */
+  
+  &:hover {
+    background-color: #218838; /* Couleur de fond au survol */
+    border-color: #1e7e34; /* Couleur de bordure au survol */
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Couleur de fond rouge pour le bouton Refuser */
+  border-color: #dc3545; /* Couleur de bordure rouge */
+  color: white; /* Couleur du texte du bouton */
+  
+  &:hover {
+    background-color: #c82333; /* Couleur de fond au survol */
+    border-color: #bd2130; /* Couleur de bordure au survol */
+  }
+}

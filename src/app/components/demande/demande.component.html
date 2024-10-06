@@ -1,0 +1,102 @@
+<div class="background-container">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <a routerLink="/dashboard" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> 
+      </a>
+      <a href="url_vers_le_formulaire_pdf" class="btn btn-secondary" target="_blank" download="demande_credit.pdf">
+        Télécharger
+      </a>
+    </div>
+    <h2 class="text-center mb-4">Demande de Crédit</h2>
+    <form (ngSubmit)="submitDemande(demandeForm)" #demandeForm="ngForm" class="needs-validation" novalidate>
+      <!-- Informations personnelles -->
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" [(ngModel)]="demande.nom" class="form-control" required />
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" [(ngModel)]="demande.prenom" class="form-control" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="demande.email" class="form-control" required email />
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="telephone">Téléphone:</label>
+            <input type="text" id="telephone" name="telephone" [(ngModel)]="demande.telephone" class="form-control" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="cin">Numéro de CIN:</label>
+            <input type="text" id="cin" name="cin" [(ngModel)]="demande.cin" class="form-control" required />
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="form-group">
+            <label for="dateNaissance">Date de Naissance:</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" [(ngModel)]="demande.dateNaissance" class="form-control" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="adresse">Adresse complète:</label>
+        <textarea id="adresse" name="adresse" [(ngModel)]="demande.adresse" class="form-control" required></textarea>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="numeroCompte">Numéro de Compte:</label>
+        <input type="text" id="numeroCompte" name="numeroCompte" [(ngModel)]="demande.numeroCompte" class="form-control" required />
+      </div>
+
+      <!-- Informations sur la demande de crédit -->
+      <div class="form-group mb-3">
+        <label for="montant">Montant souhaité:</label>
+        <input type="number" id="montant" name="montant" [(ngModel)]="demande.montant" class="form-control" required />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="butCredit">But de la demande:</label>
+        <select id="butCredit" name="butCredit" [(ngModel)]="demande.butCredit" class="form-control" required>
+          <option value="" disabled selected>Sélectionner le but de la demande</option>
+          <option value="Achat immobilier">Achat immobilier</option>
+          <option value="Achat voiture">Achat voiture</option>
+          <option value="Financement de projet">Financement de projet</option>
+          <option value="Autres">Autres</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="dureeMois">Durée souhaitée (en mois):</label>
+        <input type="number" id="dureeMois" name="dureeMois" [(ngModel)]="demande.dureeMois" class="form-control" required />
+      </div>
+
+      <!-- Boutons de soumission -->
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </div>
+    </form>
+
+    <!-- Message de succès -->
+    <div *ngIf="formSubmitted" class="alert alert-success mt-3">
+      Votre demande de crédit a été soumise avec succès !
+    </div>
+  </div>
+</div>

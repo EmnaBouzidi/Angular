@@ -1,9 +1,10 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr';
 import express from 'express';
+import cors from 'cors';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
+import { CommonEngine } from '@angular/ssr';
+import { APP_BASE_HREF } from '@angular/common';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -14,16 +15,24 @@ export function app(): express.Express {
 
   const commonEngine = new CommonEngine();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+  // Configure CORS
+  server.use(cors({
+    origin: 'http://localhost:4200', // Change this to the origin of your Angular app
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Content-Type,Authorization',
+  }));
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-  server.get('**', express.static(browserDistFolder, {
+  server.use(express.static(browserDistFolder, {
     maxAge: '1y',
     index: 'index.html',
   }));
+
+  // Example Express Rest API endpoints
+  server.get('/api/comptesbancaires', (req, res) => {
+    // Replace with your actual API logic
+    res.json({ message: 'API endpoint for comptesbancaires' });
+  });
 
   // All regular routes use the Angular engine
   server.get('**', (req, res, next) => {

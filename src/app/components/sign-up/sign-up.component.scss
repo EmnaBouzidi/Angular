@@ -1,0 +1,84 @@
+.bg-image {
+    background-image: url('../../../assets/logo-banque.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #094c7c;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 1;
+  } 
+  
+  .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #6c757d; /* Gris */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1838ca;
+    border-radius: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #0814f8;
+    border-color: #0814f8;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0814f8;
+    border-color: #0814f8;
+    color: #ffffff;
+  }
+  
+  .alert {
+    color: red;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input-group .bi {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .input-group .bi-eye-slash {
+    display: none;
+  }
+  
+  .show-password .bi-eye {
+    display: none;
+  }
+  
+  .show-password .bi-eye-slash {
+    display: inline;
+  }
+  

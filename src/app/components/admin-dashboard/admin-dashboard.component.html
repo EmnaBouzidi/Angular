@@ -1,0 +1,24 @@
+<div class="navbar">
+  <img src="../../../assets/logo-nexus.png" alt="Logo" class="logo">
+  <button class="logout-btn" (click)="logout()">Logout</button>
+</div>
+
+<div class="container">
+  <div class="leftbar">
+    <ul>
+      <li><a routerLink="/liste-utilisateurs">Gérer les Utilisateurs</a></li>
+      <li><a routerLink="/demande-credit">Gérer les Demandes de Crédit</a></li>
+    </ul>
+  </div>
+
+  <!-- Conteneur pour le message 3D -->
+  <div class="message-container">
+    <div class="message-3d">
+      Bienvenue, Admin ! Vous êtes connecté à l'application bancaire.
+
+    </div>
+  </div>
+
+  <!-- Assurez-vous d'avoir un <router-outlet> pour que les composants se chargent -->
+  <router-outlet></router-outlet>
+</div>

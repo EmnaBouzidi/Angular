@@ -1,0 +1,100 @@
+<!-- src/app/components/historique/historique.component.html -->
+
+<div class="background-image">
+    <nav class="navbar">
+        <img src="../../../assets/logo-nexus.png" alt="Logo" class="logo">
+        <button class="btn btn-primary" (click)="goBack()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="historique-container card">
+            <div class="header-with-button">
+                <h2 class="centered-title">Votre Historique</h2>
+                <a href="url_vers_le_formulaire_pdf" class="btn btn-secondary download-btn" target="_blank" download="demande_credit.pdf">
+                    Télécharger
+                </a>
+            </div>
+
+            <div class="card-body">
+                <div class="user-info">
+                    <h3>Informations Utilisateur</h3>
+                    <p><strong>Nom :</strong> BOUZIDI</p>
+                    <p><strong>Prénom :</strong> emna</p>
+                    <p><strong>Numéro de Compte :</strong> 123456789</p>
+                </div>
+
+                <h3>Historique des Transactions</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Montant</th>
+                            <th>Type</th>
+                            <th>Compte</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let transaction of transactions">
+                            <td>{{ transaction.id }}</td>
+                            <td>{{ transaction.date_transaction | date: 'yyyy-MM-dd' }}</td>
+                            <td>{{ transaction.montant | number: '1.2-2' }}</td>
+                            <td>{{ transaction.type }}</td>
+                            <td>{{ transaction.compte_id }}</td> <!-- Affichage du numéro de compte -->
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Historique des Demandes de Crédit</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date de Demande</th>
+                            <th>Montant Demandé</th>
+                            <th>But du Crédit</th>
+                            <th>Durée (mois)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2024-07-01</td>
+                            <td>5000</td>
+                            <td>Achat maison</td>
+                            <td>24</td>
+                            <td>Acceptée</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2024-07-05</td>
+                            <td>1500</td>
+                            <td>Rénovation</td>
+                            <td>12</td>
+                            <td>En attente</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2024-07-10</td>
+                            <td>3000</td>
+                            <td>Voyage</td>
+                            <td>18</td>
+                            <td>Refusée</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2024-07-15</td>
+                            <td>2000</td>
+                            <td>Éducation</td>
+                            <td>36</td>
+                            <td>Acceptée</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

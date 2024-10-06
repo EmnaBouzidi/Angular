@@ -1,0 +1,60 @@
+/* Fond d'écran */
+.background-container {
+  background-image: url('../../../assets/transfert.png'); /* Assurez-vous que le chemin est correct */
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir tout le conteneur */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Évite que l'image se répète */
+  height: 100vh; /* Hauteur de la page pour s'assurer que l'image couvre toute la page */
+  display: flex;
+  justify-content: center; /* Centre le formulaire horizontalement */
+  align-items: center; /* Centre le formulaire verticalement */
+  position: relative; /* Position relative pour permettre un positionnement absolu du bouton */
+}
+
+.transaction-form {
+  background: transparent; /* Fond blanc semi-transparent pour le formulaire */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px #007bff;; /* Ajoute une ombre pour l'effet de profondeur */
+  width: 100%;
+  max-width: 600px; /* Limite la largeur maximale du formulaire */
+  position: relative; /* Position relative pour permettre un positionnement absolu du bouton */
+}
+
+/* Conteneur pour le bouton retour */
+.back-button-container {
+  position: absolute;
+  top: 0px; /* Ajustez selon vos besoins */
+  left: 10px; /* Ajustez selon vos besoins */
+}
+
+/* Style pour le bouton retour */
+.back-button-container .btn {
+  background: none; /* Retirer le fond gris */
+  border: none; /* Retirer la bordure */
+  color: #007bff; /* Couleur de la flèche */
+  font-size: 30px; /* Ajuster la taille de la flèche */
+  padding: 0; /* Enlever le padding */
+}
+
+/* Style des groupes de formulaire */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style des tableaux (si utilisé) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Optionnel: si vous utilisez un conteneur Bootstrap */
+.container {
+  padding: 0;
+}

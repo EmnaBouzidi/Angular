@@ -1,0 +1,20 @@
+<!-- Ajouter la classe main-container au conteneur principal -->
+<div class="main-container">
+    <!-- Afficher un message de succès fixe centré -->
+    <div class="text-center mb-4 message-background">
+      <h5><i>Notification</i></h5>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Félicitations !</strong> Madame Emna Bouzidi, votre demande de crédit est acceptée avec succès. Vous pouvez nous contacter pour toute information complémentaire.
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+    </div>
+  
+    <!-- Liste des notifications avec fond -->
+    <ul class="list-group mt-4 notification-bg">
+      <li *ngFor="let notification of notifications" class="list-group-item d-flex justify-content-between align-items-center">
+        <span [class.text-muted]="notification.isRead">{{ notification.message }}</span>
+        <button *ngIf="!notification.isRead" class="btn btn-primary btn-sm" (click)="markAsRead(notification.id!)">Marquer comme lu</button>
+      </li>
+    </ul>
+  </div>
+  

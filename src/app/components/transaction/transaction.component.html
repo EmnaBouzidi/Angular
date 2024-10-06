@@ -1,0 +1,47 @@
+<div class="background-container">
+  <form (ngSubmit)="onSubmit()" class="transaction-form">
+    <div class="back-button-container">
+      <button type="button" class="btn" (click)="onRetour()" title="Retourner au tableau de bord">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+    </div>
+
+    <div class="form-group">
+      <label for="montant">Montant</label>
+      <input type="number" id="montant" [(ngModel)]="newTransaction.montant" name="montant" class="form-control" placeholder="Entrez le montant" required>
+      <div class="invalid-feedback" *ngIf="!newTransaction.montant">
+        Le montant est requis.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateTransaction">Date de Transaction</label>
+      <input type="datetime-local" id="dateTransaction" [(ngModel)]="newTransaction.date_transaction" name="dateTransaction" class="form-control" required>
+      <div class="invalid-feedback" *ngIf="!newTransaction.date_transaction">
+        La date de transaction est requise.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type</label>
+      <select id="type" [(ngModel)]="newTransaction.type" name="type" class="form-control" required>
+        <option value="DEPOT">Dépôt</option>
+        <option value="RETRAIT">Retrait</option>
+        <option value="TRANSFERT">Transfert</option>
+      </select>
+      <div class="invalid-feedback" *ngIf="!newTransaction.type">
+        Le type est requis.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="compteBancaire">Compte Bancaire</label>
+      <input type="number" id="compteBancaire" [(ngModel)]="newTransaction.compte_id" name="compteBancaire" class="form-control" placeholder="Entrez le numéro du compte" required>
+      <div class="invalid-feedback" *ngIf="!newTransaction.compte_id">
+        Le compte bancaire est requis.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Valider</button>
+  </form>
+</div>

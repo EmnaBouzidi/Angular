@@ -1,0 +1,131 @@
+// Variables pour les couleurs (facultatif, mais utile pour la gestion des couleurs)
+$primary-color: #007bff;
+$secondary-color: #ffc107;
+$danger-color: #dc3545;
+$navbar-bg-color: #127fed;
+$font-color: #ffffff;
+
+// Styles globaux pour l'image de fond
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: url('../../../assets/admin.png') no-repeat center center fixed; // Chemin vers l'image
+  background-size: cover; // L'image couvre toute la page
+  background-color: #f0f0f0; // Couleur de fond de secours
+  font-family: Arial, sans-serif; // Police par défaut
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Styles pour la Navbar
+.navbar {
+  background-color: $navbar-bg-color; // Couleur de fond de la navbar
+  padding: 1rem; // Espacement interne
+
+  .navbar-brand {
+    font-size: 1.5rem; // Taille de police pour la marque
+    color: $primary-color; // Couleur bleue pour la marque
+    text-decoration: none; // Supprimer le soulignement
+    margin-right: 1rem; // Espace à droite de la marque
+  }
+
+  .btn-primary {
+    background-color: $primary-color; // Couleur de fond bleue
+    border-color: $primary-color; // Couleur de bordure bleue
+    color: $font-color; // Couleur du texte en blanc
+    transition: background-color 0.3s, border-color 0.3s; // Transition fluide pour le survol
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Couleur de fond bleue foncée au survol
+      border-color: darken($primary-color, 10%); // Couleur de bordure bleue foncée au survol
+    }
+  }
+}
+
+// Styles pour le conteneur principal
+.container {
+  background: rgba(255, 255, 255, 0.9); // Fond blanc avec légère opacité
+  border-radius: 8px; // Coins arrondis
+  padding: 20px; // Espacement interne
+  max-width: 1200px; // Largeur maximale du conteneur
+  margin: 0 auto; // Centrer horizontalement le conteneur
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre subtile
+
+  h2 {
+    color: $primary-color; // Couleur bleue pour le titre
+    font-size: 1.5rem; // Taille de police pour le titre
+    margin-bottom: 1.5rem; // Espace sous le titre
+  }
+
+  // Styles pour le tableau
+  .table {
+    border-collapse: collapse; // Fusionner les bordures du tableau
+    width: 100%; // Largeur à 100%
+    background-color: #fff; // Fond blanc pour le tableau
+
+    thead {
+      background-color: #343a40; // Fond sombre pour l'en-tête
+      color: $font-color; // Couleur du texte en blanc pour l'en-tête
+    }
+
+    tbody {
+      tr:hover {
+        background-color: #e9ecef; // Fond clair au survol des lignes
+      }
+    }
+
+    th, td {
+      text-align: left; // Alignement à gauche
+      padding: 12px; // Espacement interne
+    }
+
+    th {
+      border-bottom: 2px solid #dee2e6; // Bordure légère pour les cellules d'en-tête
+    }
+
+    td {
+      border-bottom: 1px solid #dee2e6; // Bordure légère pour les cellules de données
+    }
+  }
+
+  // Styles pour les boutons
+  .btn {
+    &.btn-warning {
+      background-color: $secondary-color; // Couleur de fond avertissement
+      border-color: $secondary-color; // Couleur de bordure avertissement
+      color: #212529; // Couleur du texte foncé
+      transition: background-color 0.3s, border-color 0.3s; // Transition fluide pour le survol
+
+      &:hover {
+        background-color: darken($secondary-color, 10%); // Couleur de fond avertissement foncée au survol
+        border-color: darken($secondary-color, 10%); // Couleur de bordure avertissement foncée au survol
+      }
+    }
+
+    &.btn-danger {
+      background-color: $danger-color; // Couleur de fond danger
+      border-color: $danger-color; // Couleur de bordure danger
+      color: $font-color; // Couleur du texte en blanc
+      transition: background-color 0.3s, border-color 0.3s; // Transition fluide pour le survol
+
+      &:hover {
+        background-color: darken($danger-color, 10%); // Couleur de fond danger foncée au survol
+        border-color: darken($danger-color, 10%); // Couleur de bordure danger foncée au survol
+      }
+    }
+
+    &.btn-sm {
+      font-size: 0.875rem; // Taille de police plus petite pour les petits boutons
+      padding: 0.25rem 0.5rem; // Espacement interne plus petit pour les petits boutons
+      border-radius: 0.2rem; // Coins arrondis pour les petits boutons
+    }
+
+    &.ml-2 {
+      margin-left: 0.5rem; // Marge gauche pour espacer les boutons
+    }
+  }
+}

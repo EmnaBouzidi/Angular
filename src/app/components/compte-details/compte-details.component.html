@@ -1,0 +1,9 @@
+<!-- compte-details.component.html -->
+<div *ngIf="compte">
+    <p>Solde: {{ compte.solde }}</p>
+    <div *ngIf="compte.cartesBancaires.length > 0">
+        <h4>Cartes Associées:</h4>
+        <ul>
+        </ul>
+    </div>
+</div>

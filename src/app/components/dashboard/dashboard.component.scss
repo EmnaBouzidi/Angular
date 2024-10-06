@@ -1,0 +1,331 @@
+/* Styles pour les boutons dans la barre de navigation */
+.navbar {
+  background-color: #127fed; // Couleur de fond légère pour la navbar
+  padding: 1rem; // Espacement interne
+
+  .navbar-buttons {
+    display: flex;
+    align-items: center;
+
+    .notification-btn, .social-btn, .logout-btn {
+      background-color: transparent;
+      border: none;
+      color: #007bff;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0056b3; // Couleur lors du survol
+      }
+    }
+
+    .logout-btn {
+      color: #0056b3; // Couleur rouge pour le bouton logout
+
+      &:hover {
+        color: #0056b3; // Couleur rouge foncé au survol
+      }
+    }
+  }
+}
+
+
+.logout-btn:hover {
+  background-color: #e2e6ea;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #b7e5f1; /* Nouvelle couleur de fond bleu clair */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a0a0a0; /* Couleur gris */
+  color: rgb(156, 7, 7);
+  padding: 10px;
+  position: fixed; /* Navbar fixe */
+  top: 0; /* En haut de la fenêtre */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Au-dessus du contenu */
+}
+
+.logo {
+  height: 50px;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e2e6ea;
+}
+
+.container {
+  display: flex;
+  margin-top: 7px; /* Espace sous la navbar */
+  max-width: calc(400% - 400px); /* Largeur maximale moins l'espace total à gauche et à droite */
+  padding: 10 10px; /* Espace à gauche et à droite à l'intérieur de l'élément */
+}
+
+.leftbar {
+  width: 200px; /* Largeur de la barre latérale */
+  background-color: #344654; /* Couleur bleu */
+  color: white;
+  padding: 10px;
+  height: calc(100vh - 50px); /* Hauteur ajustée pour tenir compte de la navbar */
+  position: fixed; /* Fixée pour qu'elle ne défile pas */
+  top: 50px; /* Aligner sous la navbar */
+  left: 0; /* Aligner au maximum à gauche */
+}
+
+.leftbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leftbar ul li {
+  margin: 20px 0;
+}
+
+.leftbar ul li a {
+  text-decoration: none;
+  color: #a0a0a0;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.leftbar ul li a:hover {
+  background-color: #300060; /* Couleur bleu foncé */
+}
+
+.leftbar ul li a::before {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  background: url('../../../assets/visa-card.png') no-repeat center center;
+  background-size: contain;
+}
+
+.content {
+  margin-left: 200px; /* Espace pour la barre latérale */
+  padding: 20px; /* Espace intérieur de la section contenu */
+  flex-grow: 1;
+  margin-top: 50px; /* Espace sous la navbar */
+}
+
+.carousel {
+  width: 100%; /* Occupe toute la largeur de la fenêtre */
+  margin: 0; /* Supprime les marges externes */
+  padding: 0; /* Supprime les paddings internes */
+}
+
+.carousel-inner {
+  width: 100%; /* Occupe toute la largeur disponible */
+}
+
+.carousel-item img {
+  height: 250px; 
+  width: 100%; /* Assure que l'image occupe toute la largeur de l'élément */
+  object-fit: cover; /* Ajuste l'image pour couvrir l'élément sans déformation */
+}
+
+.carousel-caption {
+  background-color: rgba(3, 25, 132, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.images-section {
+  display: flex;
+  justify-content: space-between; /* Aligne les images à gauche et à droite */
+  margin-top: 20px;
+}
+
+.image-container {
+  text-align: center; /* Centre le texte et les boutons sous chaque image */
+}
+
+.image-container img {
+  max-width: 200px; /* Limite la largeur des images */
+  margin-bottom: 5px; /* Espace entre l'image et le bouton */
+}
+
+.btn {
+  display: block;
+  margin-top: 10px; /* Espace entre l'image et le bouton */
+  padding: 8px 16px; /* Réduit la taille du bouton */
+  background-color: #344654; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003d7a; /* Couleur du bouton au survol */
+}
+
+.btn-secondary {
+  background-color: #0056b3; /* Couleur de fond du bouton secondaire */
+}
+
+.btn-secondary:hover {
+  background-color: #003d7a; /* Couleur du bouton secondaire au survol */
+}
+.images-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Ajuste l'espacement entre les éléments */
+  padding: 20px; /* Ajoute de l'espace autour de la section */
+}
+
+.image-container {
+  text-align: center;
+}
+
+.text-section {
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
+  padding: 20px; /* Ajoute de l'espace intérieur autour du texte */
+  border: 1px solid #ddd; /* Ajoute une bordure légère autour de la section */
+  border-radius: 8px; /* Arrondit les coins de la bordure */
+  background-color: #f9f9f9; /* Ajoute un fond léger pour le contraste */
+}
+
+.text-section p {
+  font-weight: bold; /* Met le texte en gras */
+  font-size: 1.2em; /* Augmente la taille de la police */
+  color: #333; /* Définit une couleur de texte sombre pour la lisibilité */
+  margin: 0; /* Supprime la marge par défaut du paragraphe */
+}
+
+.rounded {
+  border-radius: 8px; /* Arrondit les coins des images */
+}
+
+.btn, .btn-secondary {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px; /* Ajoute du padding pour un bouton plus grand */
+  border: none; /* Supprime la bordure par défaut du bouton */
+  border-radius: 4px; /* Arrondit les coins des boutons */
+  color: #fff; /* Définit la couleur du texte du bouton */
+  font-size: 1em; /* Définit la taille de la police du bouton */
+  cursor: pointer; /* Change le curseur en pointeur sur survol */
+}
+
+.btn {
+  background-color: #007bff; /* Couleur de fond du bouton principal */
+}
+
+.btn-secondary {
+  background-color: #007bff; /* Couleur de fond du bouton secondaire */
+}
+.img-thumbnail {
+  display: block; /* Assure que l'image est un bloc */
+  max-width: 30%; /* Limite la largeur de l'image à 30% du conteneur */
+  height: auto; /* Maintient le ratio d'aspect de l'image */
+  border: 0px solid #ddd; /* Pas de bordure visible */
+  border-radius: 20px; /* Ajoute des coins arrondis */
+  padding: 0px; /* Ajoute un espacement intérieur */
+  background-color: #fff; /* Définit la couleur de fond de l'image */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+  transition: all 0.3s ease; /* Ajoute une transition douce pour les effets */
+  margin-top: 40px; /* Déplace l'image vers le bas avec une marge supérieure */
+  
+  &:hover {
+    border-color: #007bff; /* Change la couleur de la bordure au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Augmente l'ombre au survol */
+  }
+}
+.container {
+  position: relative; /* Pour positionner les alertes relativement à ce conteneur */
+}
+
+.alerts-container {
+  position: fixed;
+  top: 75%; /* Centrer verticalement par rapport à la fenêtre */
+  right: 500px; /* Positionner à droite avec un écart de 30px */
+  transform: translateY(-70%); /* Ajuster pour centrer parfaitement verticalement */
+  max-width: 600px;
+}
+
+
+.alert {
+  margin-bottom: 5px;
+  padding: 20px; /* Ajout de padding pour améliorer la lisibilité */
+  border-radius: 20px; /* Bords arrondis pour un effet plus doux */
+  font-family: Arial, sans-serif; /* Utilisation d'une police uniforme */
+  font-size: 1em; /* Taille de police uniforme */
+  line-height: 1.5; /* Hauteur de ligne pour améliorer la lisibilité */
+}
+
+.alert h3 {
+  font-size: 1.2em; /* Taille du titre uniforme */
+  margin-bottom: 5px; /* Espace sous le titre */
+}
+
+
+
+.alert-danger {
+  background-color: #b70606;
+  color: #080808;
+  border: 1px solid #ebccd1;
+}
+
+.alert-secondary {
+  background-color: #0b1675;
+  color: #e8ecef;
+  border: 1px solid #ddd;
+}
+
+.alert ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.alert ul li {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+.alerts-container {
+  position: fixed;
+  top: 70%; /* Centrer verticalement par rapport à la fenêtre */
+  //right: 30px;/* Positionner à droite avec un écart de 30px */
+  left: 700px; /* Positionner à gauuche avec un écart de 30px */
+  transform: translateY(-50%); /* Ajuster pour centrer parfaitement verticalement */
+  max-width: 300px;
+}
+.bottom-right-photo {
+  position: absolute;
+  bottom: 10px; /* Ajustez la distance par rapport au bas pour déplacer l'image plus bas */
+  right: 40px;  /* Ajustez la distance par rapport à la droite si nécessaire */
+  width: 400px; /* Ajustez la largeur selon vos besoins */
+  height: auto; /* Maintient le ratio de l'image */
+  z-index: 20; /* Assure que l'image est au-dessus des autres éléments */
+  border-radius: 20px;
+
+}
+
+

@@ -1,0 +1,110 @@
+/* src/app/components/historique/historique.component.scss */
+
+.background-image {
+    background-image: url('../../../assets/stat.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 0;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: transparent;
+
+        .logo {
+            height: 50px;
+        }
+    }
+}
+
+.historique-container {
+    padding: 0px;
+    max-width: 1000px;
+    margin: auto;
+
+    .header-with-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .centered-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #4CAF50; /* Change la couleur du bouton */
+            border-color: transparent; /* Change la bordure du bouton */
+            font-size: 1.2em; /* Augmente la taille de la police */
+            padding: 10px 20px; /* Augmente le padding du bouton */
+            color: white; /* Change la couleur du texte */
+
+            &:hover {
+                background-color: #45a049; /* Change la couleur du bouton au survol */
+                border-color: #45a049; /* Change la bordure du bouton au survol */
+            }
+
+            i {
+                font-size: 1.2em; /* Taille de l'icône */
+            }
+        }
+    }
+
+    .card {
+        margin-bottom: 20px;
+
+        .card-header {
+            background-color: #6c757d;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+
+            .user-info {
+                margin-bottom: 20px;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                    font-size: 14px;
+                }
+
+                th {
+                    background-color: #343a40;
+                    color: #fff;
+                }
+
+                tbody tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+
+                tbody tr:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+        }
+    }
+}
